@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reporting Regolamentare Automatizzato – MVP</title>
+  <meta name="description" content="Automatizza i report MiFID II / AML per piccole SIM: semplice, sicuro, conforme." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(8px); }
+    .grad { background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 55%, #a78bfa 100%); }
+    .chip { @apply inline-flex items-center gap-2 rounded-full px-4 py-1 text-xs font-medium bg-white/10 text-white; }
+    .card { @apply rounded-2xl border border-white/10 bg-white/5 shadow-lg shadow-black/10; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+  <!-- Header / Nav -->
+  <header class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mt-4 flex items-center justify-between rounded-full border border-white/10 bg-slate-900/70 px-4 py-3 backdrop-blur supports-[backdrop-filter]:glass">
+        <a href="#home" class="flex items-center gap-2 font-semibold tracking-tight">
+          <span class="inline-flex h-8 w-8 items-center justify-center rounded-full grad text-white font-black">R</span>
+          <span>RegReport</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm text-slate-300">
+          <a href="#problema" class="hover:text-white">Problema</a>
+          <a href="#soluzione" class="hover:text-white">Soluzione</a>
+          <a href="#mvp" class="hover:text-white">MVP</a>
+          <a href="#valore" class="hover:text-white">Valore</a>
+          <a href="#compliance" class="hover:text-white">Compliance</a>
+          <a href="#modello" class="hover:text-white">Business</a>
+          <a href="#prossimi-passi" class="hover:text-white">Roadmap</a>
+          <a href="#contatti" class="hover:text-white">Contatti</a>
+        </nav>
+        <a href="#demo" class="hidden sm:inline-flex items-center gap-2 rounded-full bg-white text-slate-900 px-4 py-2 text-sm font-semibold hover:bg-slate-200 transition">
+          Prenota demo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative pt-36">
+    <div class="absolute inset-0 grad opacity-20 blur-3xl"></div>
+    <div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
+      <span class="chip">MiFID II • AML • RegTech</span>
+      <h1 class="mt-6 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+        Automatizza i tuoi report <span class="text-sky-300">MiFID II</span> in <span class="text-sky-300">10 secondi</span>
+      </h1>
+      <p class="mx-auto mt-5 max-w-3xl text-slate-300 text-lg">
+        Semplifica il reporting regolamentare per piccole SIM: meno errori, meno tempi morti, più controllo. 
+        Generazione XML conforme ESMA, validazione e consegna sicura.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a id="demo" href="#contatti" class="inline-flex items-center gap-2 rounded-full bg-white text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-200 transition">
+          Prenota una demo gratuita
+        </a>
+        <a href="#mvp" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold hover:border-white/40 transition">
+          Vedi come funziona
+        </a>
+      </div>
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="card p-6">
+          <p class="text-3xl font-extrabold">-70%</p>
+          <p class="text-slate-300">Tempo operativo</p>
+        </div>
+        <div class="card p-6">
+          <p class="text-3xl font-extrabold">0</p>
+          <p class="text-slate-300">Errori di formato</p>
+        </div>
+        <div class="card p-6">
+          <p class="text-3xl font-extrabold">Audit</p>
+          <p class="text-slate-300">Log & hash SHA‑256</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problema -->
+  <section id="problema" class="relative py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold">Il reporting normativo oggi è un incubo</h2>
+          <ul class="mt-6 space-y-3 text-slate-300">
+            <li class="flex gap-3"><span class="text-sky-300">•</span> Excel, macro e controlli manuali ogni mese.</li>
+            <li class="flex gap-3"><span class="text-sky-300">•</span> Errori che causano respinte o rielaborazioni.</li>
+            <li class="flex gap-3"><span class="text-sky-300">•</span> Suite enterprise costose e sovradimensionate.</li>
+            <li class="flex gap-3"><span class="text-sky-300">•</span> Team piccoli senza risorse dedicate alla compliance.</li>
+          </ul>
+        </div>
+        <div class="card p-8">
+          <h3 class="text-xl font-semibold">E se bastasse un click?</h3>
+          <p class="mt-3 text-slate-300">Riduci ore di lavoro a pochi secondi con generazione automatica e controlli pre‑invio.</p>
+          <div class="mt-6 grid grid-cols-2 gap-4 text-sm">
+            <div class="rounded-xl bg-white/5 p-4">
+              <p class="font-semibold">MiFID II / MiFIR</p>
+              <p class="text-slate-300">Transaction reporting</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-4">
+              <p class="font-semibold">AML</p>
+              <p class="text-slate-300">Regole e alert (fase 2)</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-4">
+              <p class="font-semibold">ESMA XML</p>
+              <p class="text-slate-300">Conforme agli schemi</p>
+            </div>
+            <div class="rounded-xl bg-white/5 p-4">
+              <p class="font-semibold">Audit</p>
+              <p class="text-slate-300">Log & versioni regole</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Soluzione -->
+  <section id="soluzione" class="relative py-20 bg-slate-900/40">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center">La soluzione: semplice, sicura, conforme</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="card p-6">
+          <p class="text-lg font-semibold">Upload</p>
+          <p class="mt-2 text-slate-300">Carichi CSV/Excel o colleghi una sorgente dati.</p>
+        </div>
+        <div class="card p-6">
+          <p class="text-lg font-semibold">Genera & Valida</p>
+          <p class="mt-2 text-slate-300">XML conforme ESMA, validazione XSD + regole blocking/non‑blocking.</p>
+        </div>
+        <div class="card p-6">
+          <p class="text-lg font-semibold">Consegna</p>
+          <p class="mt-2 text-slate-300">SFTP nel tenant del cliente (Infomaniak) o integrazione ARM (fase 2).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MVP: come funziona -->
+  <section id="mvp" class="relative py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold">MVP – come funziona</h2>
+      <div class="mt-8 grid lg:grid-cols-2 gap-8 items-start">
+        <pre class="card p-6 text-sm overflow-x-auto"><code>Input CSV → Validazione → Generazione XML → ZIP → Consegna SFTP
+
+Componenti
+- Backend: FastAPI (Python)
+- Core: pandas, lxml/xmlschema
+- Frontend: Streamlit / Vue 3
+- Storage: SFTP Infomaniak (Svizzera, GDPR)
+- DB metadati: PostgreSQL (hash, log, esiti)
+- Deploy: Docker / Cloud Run</code></pre>
+        <div class="card p-6">
+          <p class="font-semibold">Cosa abbiamo già</p>
+          <ul class="mt-3 list-disc list-inside text-slate-300 space-y-2">
+            <li>Moduli <em>prepare / validate / deliver / receipts</em>.</li>
+            <li><em>SFTPAdapter</em> idempotente (.part → rename atomico).</li>
+            <li>Schema pagina Notion + pitch per outreach.</li>
+            <li>Alternative cloud: AWS Transfer + S3 (Object Lock).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Target e valore -->
+  <section id="valore" class="relative py-20 bg-slate-900/40">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center">Target & Valore</h2>
+      <div class="mt-10 grid md:grid-cols-2 gap-8">
+        <div class="card p-6">
+          <p class="text-lg font-semibold">Clienti target</p>
+          <ul class="mt-3 list-disc list-inside text-slate-300 space-y-2">
+            <li>Piccole SIM (&lt; 50 persone)</li>
+            <li>Family office / consulenti</li>
+            <li>Fintech con obblighi MiFID II “light”</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <p class="text-lg font-semibold">Benefici</p>
+          <ul class="mt-3 list-disc list-inside text-slate-300 space-y-2">
+            <li>−70% tempo operativo</li>
+            <li>Zero errori di formato (validazione preventiva)</li>
+            <li>Audit & log automatici (hash SHA‑256)</li>
+            <li>Costo ≪ suite enterprise</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compliance -->
+  <section id="compliance" class="relative py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold">Compliance & Sicurezza</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="card p-6">
+          <p class="font-semibold">Residency dati</p>
+          <p class="mt-2 text-slate-300">Svizzera (Infomaniak) – paese con adeguatezza GDPR.</p>
+        </div>
+        <div class="card p-6">
+          <p class="font-semibold">Cifratura</p>
+          <p class="mt-2 text-slate-300">In transito (SFTP/TLS) e a riposo (storage cifrato).</p>
+        </div>
+        <div class="card p-6">
+          <p class="font-semibold">Minimizzazione</p>
+          <p class="mt-2 text-slate-300">Nel nostro sistema conserviamo solo hash, log, esiti.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modello di business -->
+  <section id="modello" class="relative py-20 bg-slate-900/40">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-bold text-center">Modello di Business</h2>
+      <div class="mt-10 grid lg:grid-cols-3 gap-6">
+        <div class="card p-6">
+          <p class="text-lg font-semibold">Basic</p>
+          <p class="text-slate-300">MiFID II reporting</p>
+          <p class="mt-4 text-3xl font-extrabold">€ 199<span class="text-base font-medium">/mese</span></p>
+        </div>
+        <div class="card p-6 border-white/30 ring-2 ring-sky-400/50">
+          <p class="text-lg font-semibold">Pro</p>
+          <p class="text-slate-300">+ AML / dashboard / integrazione ARM</p>
+          <p class="mt-4 text-3xl font-extrabold">€ 399<span class="text-base font-medium">/mese</span></p>
+        </div>
+        <div class="card p-6">
+          <p class="text-lg font-semibold">Enterprise</p>
+          <p class="text-slate-300">On‑prem + supporto dedicato</p>
+          <p class="mt-4 text-3xl font-extrabold">su richiesta</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perché ora & Roadmap -->
+  <section id="prossimi-passi" class="relative py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-bold">Perché ora</h2>
+          <ul class="mt-6 space-y-3 text-slate-300">
+            <li class="flex gap-3"><span class="text-sky-300">•</span> Normativa europea in espansione (refit ESMA 2025).</li>
+            <li class="flex gap-3"><span class="text-sky-300">•</span> Cresce la long tail di piccole SIM/fintech.</li>
+            <li class="flex gap-3"><span class="text-sky-300">•</span> Soluzioni enterprise non adatte ai piccoli team.</li>
+          </ul>
+        </div>
+        <div class="card p-6">
+          <h3 class="text-xl font-semibold">Roadmap (prossimi 60 giorni)</h3>
+          <ol class="mt-3 list-decimal list-inside text-slate-300 space-y-2">
+            <li>Demo Streamlit cliccabile (settimana 1).</li>
+            <li>Pilota con 3–5 SIM (settimane 2–5).</li>
+            <li>Feedback → pricing & UX (settimane 4–6).</li>
+            <li>Moduli AML & ARM adapter (fase 2).</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to action finale -->
+  <section id="contatti" class="relative py-20 bg-slate-900/40">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold">Ti va di provarlo in anteprima?</h2>
+      <p class="mt-3 text-slate-300">Cerchiamo 5 realtà pilota per validare il flusso end‑to‑end. Demo gratuita di 15 minuti.</p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="#" class="inline-flex items-center gap-2 rounded-full bg-white text-slate-900 px-6 py-3 text-sm font-semibold hover:bg-slate-200 transition">Prenota una demo</a>
+        <a href="#" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold hover:border-white/40 transition">Scrivimi su LinkedIn</a>
+      </div>
+      <p class="mt-6 text-xs text-slate-400">NB: nel nostro sistema non salviamo dati sensibili dei report, solo hash, log ed esiti.</p>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-white/10">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate-400">© 2025 RegReport – Prototipo RegTech</p>
+      <div class="text-sm text-slate-400">Milano • Svizzera (Hosting) • GDPR‑compliant</div>
+    </div>
+  </footer>
+</body>
+</html>
